@@ -89,7 +89,7 @@
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <version>3.141.59</version>
+            <version>4.8.0</version>
         </dependency>
         <dependency>
             <groupId>org.json</groupId>
@@ -99,14 +99,7 @@
         <dependency>
             <groupId>io.rest-assured</groupId>
             <artifactId>rest-assured</artifactId>
-            <version>4.3.3</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>io.rest-assured</groupId>
-            <artifactId>rest-assured</artifactId>
-            <version>4.3.3</version>
-            <scope>compile</scope>
+            <version>5.3.0</version>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
@@ -152,6 +145,11 @@
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-testng</artifactId>
             <version>6.11.0</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.11.0</version>
         </dependency>
     </dependencies>
 

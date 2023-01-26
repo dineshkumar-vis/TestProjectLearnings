@@ -4,6 +4,7 @@ package com.workouts.testngparallelism;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.*;
@@ -19,7 +20,9 @@ public class TestNGSample1 {
     public void init() throws MalformedURLException {
         System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
         //driver = new ChromeDriver();
-        driver=new RemoteWebDriver(new URL("http://192.168.43.215:4444/wd/hub"), DesiredCapabilities.chrome());
+        DesiredCapabilities caps = new DesiredCapabilities();
+        caps.setBrowserName("chrome");
+        driver=new RemoteWebDriver(new URL("http://192.168.43.215:4444/wd/hub"),caps);
         driver.get("https://www.google.com/");
     }
 

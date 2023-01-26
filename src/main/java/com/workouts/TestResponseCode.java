@@ -11,7 +11,6 @@ import org.openqa.selenium.logging.LogEntries;
 import org.openqa.selenium.logging.LogEntry;
 import org.openqa.selenium.logging.LogType;
 import org.openqa.selenium.logging.LoggingPreferences;
-import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 public class TestResponseCode {
@@ -24,7 +23,7 @@ public class TestResponseCode {
     }
 
     private static void DownloadPage(String url) {
-        System.setProperty("webdriver.chrome.driver","src\\main\\resources\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver","chromedriver.exe");
         ChromeDriver driver = null;
 
         try {
@@ -36,7 +35,7 @@ public class TestResponseCode {
             // options.addExtensions(new File&#40;"extensions",
             // "Block-image_v1.1.crx"&#41;);
 
-            DesiredCapabilities cap = DesiredCapabilities.chrome();
+            DesiredCapabilities cap =new  DesiredCapabilities();
             cap.setCapability(ChromeOptions.CAPABILITY, options);
 
             // set performance logger
@@ -45,7 +44,7 @@ public class TestResponseCode {
             logPrefs.enable(LogType.PERFORMANCE, Level.ALL);
             cap.setCapability("goog:loggingPrefs", logPrefs);
 
-            driver = new ChromeDriver(cap);
+            driver = new ChromeDriver();
 
             // navigate to the page
             System.out.println("Navigate to " + url);
